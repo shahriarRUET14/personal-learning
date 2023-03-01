@@ -1,0 +1,72 @@
+body {
+  font-family: "Nunito", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+#top {
+  background-image: url("images/carousel-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#top::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: ;
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+header {
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid red;
+  z-index: 1;
+}
+header .logo {
+  float: left;
+  width: 20%;
+}
+header .logo {
+  font-size: 45px;
+  line-height: 0;
+  color: #fbaf32;
+  font-weight: 700;
+}
+header .logo h3 span {
+  color: rgb(27, 116, 31);
+}
+header .nav {
+  float: right;
+  width: 80%;
+  text-align: right;
+}
+
+header .nav ul li {
+  display: inline-block;
+}
+header .nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+header .nav ul li:last-child a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27;
+  font-weight: 600;
+  margin-right: 0px;
+}
+.best-quality {
+  z-index: 1;
+}

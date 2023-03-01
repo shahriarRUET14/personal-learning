@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useReducer } from "react";
 import Head from "next/head";
 import Link from "next/link";
-
+import { Store } from "@/utils/Store";
 export default function Layout({ title, children }) {
+  const { state, dispatch } = useReducer(Store);
+  const { cart } = state;
   return (
     <>
       <Head>
@@ -19,6 +21,13 @@ export default function Layout({ title, children }) {
             <div>
               <Link className="p-2" href="/cart">
                 Cart
+                {cart.cartItems.length > 0 && (
+                  <span>
+                    {" "}
+                    (cart.cartItems.reduce((acumulator ,action) => acumulator
+                    +c.quantity))
+                  </span>
+                )}
               </Link>
               <Link className="p-2" href="/login">
                 Login
